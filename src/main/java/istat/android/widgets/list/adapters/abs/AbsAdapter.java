@@ -24,7 +24,7 @@ public abstract class AbsAdapter<viewValue> extends
 
     ImageLoader imageLoader;
     protected LayoutInflater inflater;
-    protected int baseLayoutRessource = 0;
+    protected int baseLayoutResource = 0;
 
     // protected List<Map<Integer,viewValue>> listItems=new
     // ArrayList<Map<Integer,viewValue>>();
@@ -33,7 +33,8 @@ public abstract class AbsAdapter<viewValue> extends
                       List<Map<Integer, viewValue>> objects) {
         super(context, textViewResourceId, objects);
         // listItems=objects;
-        baseLayoutRessource = textViewResourceId;
+
+        baseLayoutResource = textViewResourceId;
         imageLoader = new ImageLoader(context);
         inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -48,7 +49,7 @@ public abstract class AbsAdapter<viewValue> extends
         if (convertView != null)
             rootView = convertView;
         else {
-            rootView = inflater.inflate(baseLayoutRessource, parent, false);
+            rootView = inflater.inflate(baseLayoutResource, parent, false);
         }
         Map<Integer, ?> item = getItem(position);
 
