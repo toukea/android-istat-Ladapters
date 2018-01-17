@@ -10,14 +10,14 @@ public abstract class SimpleObjectAdapter<ObjectClass> extends
 
 	public SimpleObjectAdapter(Context context, int textViewResourceId) {
 		super(context, textViewResourceId);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public SimpleObjectAdapter(Context context, int textViewResourceId,
                                List<Map<Integer, String>> objects) {
 		super(context, textViewResourceId);
 		addAll(objects);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public SimpleObjectAdapter(Context context, int textViewResourceId,
@@ -25,7 +25,7 @@ public abstract class SimpleObjectAdapter<ObjectClass> extends
 		super(context, textViewResourceId);
 		for (ObjectClass item : objects)
 			addItem(item);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }

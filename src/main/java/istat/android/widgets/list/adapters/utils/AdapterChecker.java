@@ -29,7 +29,7 @@ public class AdapterChecker<ListObject> {
 
 		@Override
 		public boolean setViewValue(View view, Object data, String text) {
-			// TODO Auto-generated method stub
+
 			if (data == null || text == null || text.equals("")) {
 //				if (view.getId() == checkerId)
 //					{
@@ -93,7 +93,7 @@ public class AdapterChecker<ListObject> {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+
 				while (checkedState.size() <= index + 1) {
 					checkedState.add(false);
 				}

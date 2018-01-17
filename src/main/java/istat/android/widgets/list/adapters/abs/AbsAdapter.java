@@ -44,7 +44,7 @@ public abstract class AbsAdapter<viewValue> extends
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
+
         View rootView = null;
         if (convertView != null)
             rootView = convertView;
@@ -110,7 +110,7 @@ public abstract class AbsAdapter<viewValue> extends
         @Override
         public boolean setViewValue(View tmpView, Object item,
                                     String textRepresentation) {
-            // TODO Auto-generated method stub
+
             return viewBinderManager
                     .bindView(tmpView, item, textRepresentation);
         }
@@ -120,14 +120,14 @@ public abstract class AbsAdapter<viewValue> extends
 
         @Override
         public boolean onLoadFinish(ImageLoader.PhotoToLoad phLoad, Bitmap bitmap) {
-            // TODO Auto-generated method stub
+
             notifyDataSetChanged();
             return false;
         }
 
         @Override
         public boolean onLoad(ImageLoader.PhotoToLoad phLoad) {
-            // TODO Auto-generated method stub
+
 
             return false;
         }

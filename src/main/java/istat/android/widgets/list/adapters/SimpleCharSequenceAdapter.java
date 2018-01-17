@@ -14,7 +14,6 @@ public class SimpleCharSequenceAdapter extends AbsAdapter<CharSequence> {
     public SimpleCharSequenceAdapter(Context context, int textViewResourceId,
                                      List<Map<Integer, CharSequence>> objects) {
         super(context, textViewResourceId, objects);
-        // TODO Auto-generated constructor stub
     }
 
     public SimpleCharSequenceAdapter(Context context, int textViewResourceId) {
