@@ -38,7 +38,7 @@ public abstract class AbsAdapter<viewValue> extends
         imageLoader = new ImageLoader(context);
         inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        imageLoader.setLoadListener(imageLoadListener);
+//        imageLoader.setLoadListener(imageLoadListener);
 
     }
 
@@ -74,7 +74,7 @@ public abstract class AbsAdapter<viewValue> extends
     }
 
     void setViewImage(final ImageView v, final String path) {
-        imageLoader.displayImage(path, v);
+        imageLoader.displayImage(path, v, imageLoadListener);
     }
 
     public void setViewBinder(ViewBinder viewBinder) {
@@ -116,19 +116,28 @@ public abstract class AbsAdapter<viewValue> extends
         }
 
     };
-    private ImageLoader.ImageLoadListener imageLoadListener = new ImageLoader.ImageLoadListener() {
-
-        @Override
-        public boolean onLoadFinish(ImageLoader.PhotoToLoad phLoad, Bitmap bitmap) {
-
-            notifyDataSetChanged();
-            return false;
-        }
+    private ImageLoader.LoadCallback imageLoadListener = new ImageLoader.LoadCallback() {
 
         @Override
         public boolean onLoad(ImageLoader.PhotoToLoad phLoad) {
 
 
+            return false;
+        }
+
+        @Override
+        public void onLoadCompleted(ImageLoader.PhotoToLoad phLoad, boolean success) {
+            notifyDataSetChanged();
+        }
+
+        @Override
+        public boolean onLoadSucceed(ImageLoader.PhotoToLoad phLoad, Bitmap bitmap) {
+
+            return false;
+        }
+
+        @Override
+        public boolean onLoadError(ImageLoader.PhotoToLoad phLoad, Throwable error) {
             return false;
         }
     };
