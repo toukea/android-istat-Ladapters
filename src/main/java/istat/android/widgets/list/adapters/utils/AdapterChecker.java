@@ -33,7 +33,7 @@ public class AdapterChecker<ListObject> {
 			if (data == null || text == null || text.equals("")) {
 //				if (view.getId() == checkerId)
 //					{
-//					view.setVisibility(View.VISIBLE);
+//					view.setVisibility(View.STATE_VISIBLE);
 //					((CheckBox) view).setChecked(false);
 //					}
 //				else
