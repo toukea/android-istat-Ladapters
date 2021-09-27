@@ -1,13 +1,13 @@
 package istat.android.widgets.list.adapters;
 
 
-import istat.android.widgets.list.adapters.abs.AbsAdapter;
+import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import android.content.Context;
+import istat.android.widgets.list.adapters.abs.AbsAdapter;
 
 public class SimpleCharSequenceAdapter extends AbsAdapter<CharSequence> {
 
