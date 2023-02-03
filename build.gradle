@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 ext {
     PUBLISH_GROUP_ID = 'istat.android.widgets.list.adapters'
     PUBLISH_ARTIFACT_ID = 'istat-adapters'
@@ -7,12 +7,11 @@ ext {
 }
 apply from: 'release-aar.gradle'
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 32
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 27
+        targetSdkVersion 32
     }
 
     buildTypes {
@@ -25,5 +24,5 @@ android {
 
 dependencies {
  //   compile project(':istatBase')
-    compile project(path: ':android-istat-tools')
+    api project(path: ':android-istat-tools')
 }
