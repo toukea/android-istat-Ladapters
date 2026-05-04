@@ -7,6 +7,7 @@ ext {
 }
 apply from: 'release-aar.gradle'
 android {
+    namespace 'istat.android.widgets.list.adapters'
     compileSdkVersion 32
 
     defaultConfig {
